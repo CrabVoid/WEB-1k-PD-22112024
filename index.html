@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>Augums</label>
+    <input type="number" id="heightInput" />
+    <br />
+    <label>Svars</label>
+    <input type="number" id="weightInput" />
+    <br />
+    <button type="submit" , id="calculateBtn">Aprēķināt</button>
+    <br />
+    <p id="result"></p>
+
+    <script>
+      let height = document.getElementById("heightInput");
+      let weight = document.getElementById("weightInput");
+      let button = document.getElementById("calculateBtn");
+      let output = document.getElementById("result");
+      addEventListener("click", calculateBtn);
+
+      function calculateBtn() {
+        ĶMI = weight / (height * height);
+        console.log(ĶMI);
+      }
+    </script>
+  </body>
+</html>
