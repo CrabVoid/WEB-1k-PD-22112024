@@ -21,12 +21,27 @@
       let weight = document.getElementById("weightInput");
       let button = document.getElementById("calculateBtn");
       let output = document.getElementById("result");
-      addEventListener("click", calculateBtn);
 
-      function calculateBtn() {
-        ĶMI = weight / (height * height);
-        console.log(ĶMI);
+      function processInput() {
+        heightValue = heightInput.value;
+        weightValue = weightInput.value;
+        let result = calculateBmi(heightValue, weightValue);
+        output.innerHTML = result;
+        if (result < 18.5) {
+          output.innerHTML = "ĶMI IR " + result + "  Nepietiekams svars";
+        } else if ((result >= 18.5, result <= 24.9)) {
+          output.innerHTML = "ĶMI IR " + result + "  Normāls svars";
+        } else if ((result >= 25, result <= 29.9)) {
+          output.innerHTML = "ĶMI IR " + result + "  Liekais svars";
+        } else if (result >= 30) {
+          output.innerHTML = "ĶMI IR " + result + "  Aptaukošanās";
+        }
       }
+
+      button.addEventListener("click", processInput);
+    </script>
+  </body>
+</html>
     </script>
   </body>
 </html>
