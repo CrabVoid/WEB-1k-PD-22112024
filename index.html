@@ -24,14 +24,14 @@
       button.addEventListener("click", processInput);
       
 
-      function calculateBmi(height, weight) {
+      function Bmi(height, weight) {
         return weight / (height * height);
       }
 
       function processInput() {
         heightValue = height.value;
         weightValue = weight.value;
-        let result = calculateBmi(heightValue, weightValue);
+        let result = Bmi(heightValue, weightValue);
         output.innerHTML = result;
 
         
