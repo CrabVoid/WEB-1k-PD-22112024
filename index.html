@@ -21,12 +21,20 @@
       let weight = document.getElementById("weightInput");
       let button = document.getElementById("calculateBtn");
       let output = document.getElementById("result");
+      button.addEventListener("click", processInput);
+      
+
+      function calculateBmi(height, weight) {
+        return weight / (height * height);
+      }
 
       function processInput() {
-        heightValue = heightInput.value;
-        weightValue = weightInput.value;
+        heightValue = height.value;
+        weightValue = weight.value;
         let result = calculateBmi(heightValue, weightValue);
         output.innerHTML = result;
+
+        
         if (result < 18.5) {
           output.innerHTML = "ĶMI IR " + result + "  Nepietiekams svars";
         } else if ((result >= 18.5, result <= 24.9)) {
@@ -37,8 +45,6 @@
           output.innerHTML = "ĶMI IR " + result + "  Aptaukošanās";
         }
       }
-
-      button.addEventListener("click", processInput);
     </script>
   </body>
 </html>
